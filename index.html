@@ -1,25 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
+<html lang="en">
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./dist/renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat Assistant</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="chat-container">
+    <div class="chat-messages">
+    </div>
+    <div class="input-container">
+      <input type="text" style="display: none" class="message-input" placeholder="Type a message...">
+      <button style="display: none" class="send-button">Send</button>
+      <button class="push-to-talk">
+        <svg fill="#ffffff" height="18px" width="18px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512.00 512.00" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512"
+          stroke="#ffffff">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <g>
+                <path
+                  d="m439.5,236c0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,70-18,126.9-142.7,126.9-78.7,0-142.7-56.9-142.7-126.9 0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,86.2 71.5,157.4 163.1,166.7v57.5h-23.6c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-23.6v-57.5c91.6-9.3 163.1-80.5 163.1-166.7z">
+                </path>
+                <path
+                  d="m256,323.5c51,0 92.3-41.3 92.3-92.3v-127.9c0-51-41.3-92.3-92.3-92.3s-92.3,41.3-92.3,92.3v127.9c0,51 41.3,92.3 92.3,92.3zm-52.3-220.2c0-28.8 23.5-52.3 52.3-52.3s52.3,23.5 52.3,52.3v127.9c0,28.8-23.5,52.3-52.3,52.3s-52.3-23.5-52.3-52.3v-127.9z">
+                </path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </button>
+
+
+    </div>
+  </div>
+  <p id="transcript"></p>
+  <script src="./script.js"></script>
+</body>
+
 </html>
